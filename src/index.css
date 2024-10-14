@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "raleway-regular";
+  src: url(../fonts/raleway-regular.woff) format("woff"),
+    url(../fonts/raleway-regular.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "raleway-semibold";
+  src: url(../fonts/raleway-semibold.woff) format("woff"),
+    url(../fonts/raleway-semibold.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "raleway-bold";
+  src: url(../fonts/raleway-bold.woff) format("woff"),
+    url(../fonts/raleway-bold.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "playfairdisplay-bold";
+  src: url(../fonts/playfairdisplay-bold.woff) format("woff"),
+    url(../fonts/playfairdisplay-bold.woff2) format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --accent: 222, 0, 0;
+  --light: 255, 255, 255;
+  --dark: 41, 41, 58;
+
+  --step--2: clamp(0.7686rem, 0.654rem + 0.5728vw, 1.0979rem);
+  --step--1: clamp(0.8201rem, 0.6978rem + 0.6112vw, 1.1715rem);
+  --step-0: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
+  --step-1: clamp(0.9336rem, 0.7945rem + 0.6959vw, 1.3338rem);
+  --step-2: clamp(0.9962rem, 0.8477rem + 0.7425vw, 1.4231rem);
+  --step-3: clamp(1.0629rem, 0.9045rem + 0.7922vw, 1.5185rem);
+  --step-4: clamp(1.1341rem, 0.9651rem + 0.8453vw, 1.6202rem);
+  --step-5: clamp(1.2101rem, 1.0297rem + 0.902vw, 1.7287rem);
+}
+
+@layer base{
+
+  body {
+    @apply font-regular
+  }
+  h1, h2, h3, h4, h5, h5,h6{
+    @apply font-header leading-relaxed
+  }
+
+  h1 {
+    @apply text-ch1 mb-5 leading-snug
+  }
+  h2 {
+    @apply text-ch2 mb-4
+  }
+  h3 {
+    @apply text-ch3 mb-3
+  }
+  h4 {
+    @apply text-ch4 mb-3
+  }
+  h5 {
+    @apply text-ch5 mb-3
+  }
+  h6 {
+    @apply text-ch6 mb-3
+  }
+
+  p{
+    @apply text-base
+  }
+
+  img{
+    @apply block
+  }
+
+  .banner-card:hover img{
+    @apply opacity-50
+  }
+
+  .slick-track{
+    @apply grid grid-cols-3 gap-5
+  }
+}
