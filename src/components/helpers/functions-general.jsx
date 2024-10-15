@@ -1,0 +1,1 @@
+export const imgUrlPath = "http://localhost/viter-fashion-blog/public/img/";
