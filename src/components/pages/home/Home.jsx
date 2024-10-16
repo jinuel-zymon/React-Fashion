@@ -3,14 +3,16 @@ import Header from "../../partials/Header";
 import HomeBanner from "./HomeBanner";
 import HomeTrending from "./HomeTrending";
 import HomeSticky from "./HomeSticky";
+import Footer from "../../partials/Footer";
 
 const Home = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <HomeBanner/>
       <HomeTrending/>
       <HomeSticky/>
+      <Footer/>
     </>
   );
 };

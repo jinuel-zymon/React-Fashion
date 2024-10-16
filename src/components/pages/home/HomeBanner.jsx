@@ -6,6 +6,7 @@ import { imgUrlPath } from "../../helpers/functions-general";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HomeBanner = () => {
 
@@ -41,6 +42,32 @@ const HomeBanner = () => {
     slidesToScroll: 3,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -58,7 +85,7 @@ const HomeBanner = () => {
                     <div className='bg-black'>
                       <img
                         src={`${imgUrlPath}${item.fashion_img}`}
-                        className='w-full h-[746px] object-cover object-center'
+                        className='w-full h-[300px] md:h-[746px] object-cover object-center'
                       />
                     </div>
                     <div className='absolute bottom-2 text-center left-1/2 -translate-x-1/2 w-[330px] text-light'>
@@ -68,7 +95,7 @@ const HomeBanner = () => {
                       <p className='text-xs mt-3 mb-1 uppercase'>
                         {item.fashion_published}
                       </p>
-                      <h4>{item.fashion_title}</h4>
+                      <Link to={`${item.fashion_title.toLowerCase().replaceAll(" ", "-")}`}><h4>{item.fashion_title}</h4></Link>
                     </div>
                   </div>
                 );

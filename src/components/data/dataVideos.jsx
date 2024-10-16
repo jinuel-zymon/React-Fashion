@@ -1,7 +1,7 @@
 export const videos = [
   {
     video_aid: 1,
-    video_code: "https://www.youtube.com/embed/bB3-CUMERIU?si=qHx6TGL_XOn3rP9T",
+    video_code: "https://www.youtube.com/embed/6vOm3gWQinQ?si=duKr71Gn3KsMYktH",
     video_title: "yyyyyy",
     video_thumbnail: "bini-10.jpg"
   },
