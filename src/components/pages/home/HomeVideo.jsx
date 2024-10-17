@@ -13,7 +13,7 @@ const HomeVideo = () => {
   return (
     <div className='videos mb-24 overflow-x-hidden'>
       <PartHeader title='Videos' />
-      
+      <div className="flex flex-col items-center">
       <iframe
         className='md:w-full md:h-[500px] aspect-video'
         src={code}
@@ -23,8 +23,7 @@ const HomeVideo = () => {
         referrerPolicy='strict-origin-when-cross-origin'
         allowFullScreen
       ></iframe>
-
-      <div className='flex gap-6 max-w-[390px] md:max-w-[900px] overflow-x-auto mt-10 pb-5'>
+      <div className='flex gap-6 max-w-[450px] md:max-w-[900px] overflow-x-auto mt-10 pb-5'>
         {videos.map((item, key) => {
           return (
             <button
@@ -41,6 +40,7 @@ const HomeVideo = () => {
             </button>
           );
         })}
+      </div>
       </div>
     </div>
   );

@@ -138,6 +138,10 @@
   animation-timing-function:linear;
 }
 
+.no-scroll {
+  @apply h-screen overflow-hidden
+}
+
 @keyframes anim-scale{
   0%{
     transform: scale(1)

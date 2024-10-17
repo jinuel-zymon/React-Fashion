@@ -33,7 +33,7 @@ const Single = () => {
             </ul>
 
             <div className="min-h-[60vh] relative bg-cover bg-center after:content-[''] after:w-full after:h-full after:bg-black after:bg-opacity-40 after:absolute after:top-0 after:left-0" style={{backgroundImage:`url(${imgUrlPath}/${article().fashion_img})`}}>
-              <div className='absolute top-10 left-10 w-[94%] text-light z-50'>
+              <div className='absolute top-10 left-10 w-[94%] text-light z-10'>
                 <div className='flex gap-10 mb-5'>
                 <Link to={`/${article().fashion_category}`} className='uppercase hover:text-accent'>{article().fashion_category}</Link>
                 <p>The estimated reading time is 3 minutes</p>
@@ -49,7 +49,7 @@ const Single = () => {
 
         <div className='py-24'>
           <Wrapper>
-            <div className="grid grid-cols-[3fr_1fr] gap-6">
+            <div className="grid md:grid-cols-[3fr_1fr] gap-6">
               <div className='article'>
                 <Markdown>
                   {article().fashion_article}

@@ -8,7 +8,7 @@ import Footer from "../../partials/Footer";
 const Home = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <HomeBanner/>
       <HomeTrending/>
       <HomeSticky/>
